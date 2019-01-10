@@ -1,10 +1,8 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import Hello from './components/HelloWorld/Hello';
-
-import pepe from 'test-components/dist';
-
-console.log(pepe);
+import  { Hello }  from 'ts-react-web-library';
+ 
+console.log(Hello);
 
 
 const styles = require('./main.css');
@@ -12,7 +10,7 @@ const styles = require('./main.css');
 ReactDOM.render(
   (
     <div>
-      <Hello  compiler="Typescript" framework="React" bundler="Webpack" />
+      <Hello compiler="test" bundler="Test" framework="test" />
     </div>
   ),
 document.getElementById('root'));
