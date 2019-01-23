@@ -11,12 +11,15 @@
     "target": "es6",
     "strict": true,
     "outDir": "dist",
-    "lib": ["es2018"],
+    "lib": ["es2018", "dom"],
+    "types": ["reflect-metadata"],
     // "rootDir": "src",
     "sourceMap": true,
     // "baseUrl": ".",
     "moduleResolution": "node",
     "removeComments": true,
-    "declaration": true
+    "declaration": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   }
 }

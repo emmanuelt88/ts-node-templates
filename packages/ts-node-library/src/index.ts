@@ -1,10 +1,11 @@
-import DemoService from './lib/service';
+import { SaludatorService, ConsumerSaludatorService } from './lib/services';
+import ContainerProvider from "./lib/platform/ioc.provider";
 
-const testHello =  () => {
-  return 'Hello world';
-};
+const container = ContainerProvider.getInstance();
+
 
 export {
-  DemoService,
-  testHello
+  container,
+  SaludatorService,
+  ConsumerSaludatorService
 }
