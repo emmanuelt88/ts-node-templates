@@ -1,9 +1,12 @@
-import { injectable } from 'inversify';
-import "reflect-metadata";
-import { provide } from "inversify-binding-decorators";
 
-export default class SaludatorService {
-  sayHello(name: String) {
+import { Singleton, AutoWired, Provides } from "typescript-ioc";
+
+export default abstract class SaludatorService {
+  abstract sayHello(name: String): String;
+}
+@Provides(SaludatorService) 
+export class SaludatorServiceImpl implements SaludatorService{
+  sayHello(name: String):String {
     return `Hello ${name}`;
   }
 }

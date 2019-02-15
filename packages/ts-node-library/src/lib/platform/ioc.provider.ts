@@ -1,6 +1,4 @@
-import { Container } from 'inversify';
 import * as dependencies from "../services";
-import { autoProvide } from 'inversify-binding-decorators';
 
 class ContainerProvider {
   static _instance: Container;

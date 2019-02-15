@@ -1,6 +1,6 @@
 {
   "files": [
-    "src/index.ts"
+    "src/index.ts", "./src/lib/services/SaludatorServiceImpl.ts"
   ],
   "include": [
     "src/**/*.ts",
