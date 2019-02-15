@@ -1,8 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import  { Hello }  from 'ts-react-web-library';
- 
-console.log(Hello);
+import { Hello } from '@ts-template/ts-react-web-library';
+
 
 
 const styles = require('./main.css');
@@ -10,7 +9,7 @@ const styles = require('./main.css');
 ReactDOM.render(
   (
     <div>
-      <Hello compiler="test" bundler="Test" framework="test" />
+      <Hello compiler="test01" bundler="Test02" framework="test03" />
     </div>
   ),
 document.getElementById('root'));

@@ -3,5 +3,6 @@
 /* */
 body {
   line-height: 2;
-  background: gray;
+  border: 10px solid red;
+  background: white;
 }
