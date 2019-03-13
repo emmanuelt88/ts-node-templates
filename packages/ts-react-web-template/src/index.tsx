@@ -1,15 +1,11 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { Hello } from '@ts-template/ts-react-web-library';
+import * as React from "react";
+import { configuration } from "./components/Layout/config";
+import { Provider } from "react-redux";
+import * as ReactDOM from "react-dom";
+import routes from "./configuration/routes";
 
+const render = (RootApp: any) => {
+  ReactDOM.render(<RootApp />, document.getElementById("root"));
+};
 
-
-const styles = require('./main.css');
-
-ReactDOM.render(
-  (
-    <div>
-      <Hello compiler="test01" bundler="Test02" framework="test03" />
-    </div>
-  ),
-document.getElementById('root'));
+render(routes);
