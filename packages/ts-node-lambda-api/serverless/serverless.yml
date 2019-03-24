@@ -1,0 +1,21 @@
+service: lamda-api-template # NOTE: update this with your service name
+
+plugins:
+
+custom:
+  test: 'test'
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'sa-east-1'}
+  environment: ${file(./environment.yml)}
+
+functions:
+  app:
+    handler: api.handler
+    # The `events` block defines how to trigger the http events
+    events:
+        - http: ANY /
+        - http: 'ANY {proxy+}'

@@ -1,0 +1,2 @@
+STAGE: ${self:provider.stage}
+SLS_DEBUG: "*"
