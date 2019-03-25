@@ -1,7 +1,5 @@
-import { getLoggerFor } from 'app/platform/logging/logger';
+import { LoggerFactory } from 'app/platform/utils/logger';
 import { Controller } from 'typescript-lambda-api';
-
-
 export class BaseController<T> extends Controller {
-  protected logger = getLoggerFor(this);
+  protected logger = LoggerFactory.getLogger(this);
 }

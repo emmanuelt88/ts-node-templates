@@ -8,8 +8,7 @@ const myFormat = printf(({ level, message, label, timestamp }) => {
   let formattedMessage = message;
   try {
     formattedMessage = inspect(message);
-  } catch (error) {
-    logger.error(error);
+  } catch {
     formattedMessage = message.toString();
   }
   return `${timestamp} ${level.toUpperCase()} [${label}]: ${formattedMessage}`;
@@ -34,7 +33,7 @@ const getName = (obj: any): string => {
 
   return result || "";
 };
-const getLoggerFor = (context: any): winston.Logger => {
+const getLogger = (context: string| any): winston.Logger => {
   const logger: winston.Logger = winston.createLogger({
     exitOnError: false,
     level: defaultLevel || "debug",
@@ -56,6 +55,7 @@ const getLoggerFor = (context: any): winston.Logger => {
   return logger;
 };
 
-const logger: winston.Logger = getLoggerFor("Default");
 
-export { logger, getLoggerFor };
+export const LoggerFactory = {
+  getLogger,
+}

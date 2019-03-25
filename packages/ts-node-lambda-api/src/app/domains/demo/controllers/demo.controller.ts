@@ -1,5 +1,5 @@
 import { injectable } from "inversify"
-import { apiController, Controller, GET } from "typescript-lambda-api"
+import { apiController,  GET } from "typescript-lambda-api"
 import { BaseController } from "app/platform/controllers/BaseController";
 @apiController("/demo")
 @injectable()

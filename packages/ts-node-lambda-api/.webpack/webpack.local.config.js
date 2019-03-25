@@ -12,7 +12,6 @@ fs.readdirSync('node_modules')
   });
 
 
-  console.log(path.resolve(__dirname, '/../src/app/'));
 module.exports = {
   entry: __dirname + '/../src/app/api/local.ts',
   output: {
