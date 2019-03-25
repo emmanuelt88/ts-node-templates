@@ -31,6 +31,7 @@
     "@types/mocha": "^5.2.5",
     "@types/node": "^11.11.6",
     "@types/shelljs": "^0.8.1",
+    "@types/winston": "^2.4.4",
     "aws-sdk": "^2.422.0",
     "chai": "^4.2.0",
     "fs-extra": "^7.0.1",
@@ -52,6 +53,7 @@
     "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
-    "typescript-lambda-api": "^0.3.0"
+    "typescript-lambda-api": "^0.3.0",
+    "winston": "^3.2.1"
   }
 }
