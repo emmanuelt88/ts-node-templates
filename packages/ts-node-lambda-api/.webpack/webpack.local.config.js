@@ -1,5 +1,6 @@
 var fs = require('fs');
 const path = require('path');
+const WebPackScripts = require('./scripts');
 
 var nodeModules = {};
 fs.readdirSync('node_modules')
@@ -10,6 +11,8 @@ fs.readdirSync('node_modules')
     nodeModules[mod] = 'commonjs ' + mod;
   });
 
+
+  console.log(path.resolve(__dirname, '/../src/app/'));
 module.exports = {
   entry: __dirname + '/../src/app/api/local.ts',
   output: {
@@ -22,17 +25,11 @@ module.exports = {
     __dirname: false
   },
   resolve: {
-    // Add '.ts' and '.tsx' as a resolvable extension.
-    extensions: ['.webpack.js', '.web.js', '.ts', '.tsx', '.js'],
+    extensions: WebPackScripts.getExtensions(),
+    alias: WebPackScripts.getAliasList()
   },
   module: {
-    rules: [
-      {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/
-      },
-    ]
+    rules: WebPackScripts.getRules()
   },
   target: 'node',
   externals: nodeModules,

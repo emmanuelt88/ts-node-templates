@@ -5,7 +5,7 @@ import { ApiConsoleApp } from "typescript-lambda-api-local"
 import { configureApi } from './config';
  
 // if you use a different directory, point to it here instead of 'controllers'
-let appConfig = new AppConfig()
+let appConfig = new AppConfig();
  
 appConfig.base = "/api/v1"
 appConfig.version = "v1"

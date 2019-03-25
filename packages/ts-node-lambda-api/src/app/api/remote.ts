@@ -4,7 +4,7 @@ import { AppConfig, ApiLambdaApp } from "typescript-lambda-api"
 import { configureApi } from "./config";
  
 export async function handler(event, context) {
-    let appConfig = new AppConfig()
+    let appConfig = new AppConfig();
  
     appConfig.base = "/api/v1"
     appConfig.version = "v1"

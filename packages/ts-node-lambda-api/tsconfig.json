@@ -1,15 +1,18 @@
 {
   "compilerOptions": {
+    
       "module": "commonjs",
       "moduleResolution": "node",
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true,
       "strict": false,
       "baseUrl": ".",
+      "rootDir": ".",
       "outDir": "dist",
       "paths": {
           "*": [
-              "node_modules/*"
+              "node_modules/*",
+              "src/*"
           ]
       },
       "target": "es2017",

@@ -21,13 +21,35 @@ const getPaths = () => {
     })
     .reduce((prev, current) => {
       return prev.concat(current);
-    }, []);
-  ;
+    }, []);;
 
   return Object.assign({}, ...folders);
 };
 
-
-module.exports = {
-  getPaths,
+const getAliasList = () => {
+  return {
+    app: __dirname + '/../src/app/',
+    src: __dirname + '/../src/',
+  };
 };
+
+const getExtensions = () => {
+  return ['.webpack.js', '.web.js', '.ts', '.tsx', '.js'];
+};
+
+const getRules = () => {
+  return [{
+    test: /\.tsx?$/,
+    use: 'ts-loader',
+    exclude: /node_modules/
+  }, ];
+};
+
+const WebPackScripts = {
+  getPaths,
+  getAliasList,
+  getExtensions,
+  getRules,
+};
+
+module.exports = WebPackScripts;

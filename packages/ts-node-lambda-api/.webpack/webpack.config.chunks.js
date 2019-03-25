@@ -1,28 +1,6 @@
 var fs = require('fs');
-const path = require('path');
 const nodeExternals = require('webpack-node-externals');
-const scripts = require("./scripts");
-
-// const getPaths = () => {
-//   const resolvePath = path.resolve(__dirname, "../src/controllers");
-
-//   const folders = fs
-//     .readdirSync(resolvePath)
-//     .filter(file => fs.lstatSync(`${resolvePath}/${file}`).isFile())
-//     // .filter(folder => fs.lstatSync(`${resolvePath}/${folder}`).isDirectory() && fs.existsSync(`${resolvePath}/${folder}/index.js`))
-//     .map(file => {
-
-//       const fileName = file.replace("\.ts","");
-//       return {
-//         [`${fileName}`]: `${resolvePath}/${file}`
-//       };
-//     })
-//     // .concat(getCustomPaths(resolvePath))
-//     ;
-
-//   return Object.assign({}, ...folders);
-// };
-
+const WebPackScripts = require('./scripts');
 
 var nodeModules = {};
 fs.readdirSync('node_modules')
@@ -34,7 +12,7 @@ fs.readdirSync('node_modules')
   });
 
 module.exports = {
-  entry: scripts.getPaths(),
+  entry: WebPackScripts.getPaths(),
   output: {
     path: __dirname + '/../dist/controllers',
     libraryTarget: 'commonjs2',
@@ -51,17 +29,11 @@ module.exports = {
     },
   },
   resolve: {
-    // Add '.ts' and '.tsx' as a resolvable extension.
-    extensions: ['.webpack.js', '.web.js', '.ts', '.tsx', '.js'],
+    extensions: WebPackScripts.getExtensions(),
+    alias: WebPackScripts.getAliasList()
   },
   module: {
-    rules: [
-      {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/
-      },
-    ]
+    rules: WebPackScripts.getRules()
   },
   target: 'node',
   externals: [nodeExternals()],
