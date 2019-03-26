@@ -5,7 +5,7 @@ import AbstractController from "app/domains/platform/controller/AbstractControll
 @apiController("/demov2")
 @injectable() // all controller classes must be decorated with injectable
 // extending Controller is optional, it provides convience methods
-export class Demo2Controller extends AbstractController {
+export class Demo2Controller extends AbstractController<Demo2Controller> {
     // GET, POST, PUT, PATCH and DELETE are supported
     @GET()
     public get() {
