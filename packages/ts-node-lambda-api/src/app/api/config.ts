@@ -1,7 +1,6 @@
-import { DemoController } from '../domains/demo/controllers/DemoController';
 import { ApiApp } from "typescript-lambda-api";
 import { API } from "lambda-api";
-import IoCProviderFactory from 'app/platform/ioc/IoCProviderFactory';
+import IoCProviderFactory from "app/domains/platform/ioc/IoCProviderFactory";
 
 IoCProviderFactory.getInstance().initialize();
 

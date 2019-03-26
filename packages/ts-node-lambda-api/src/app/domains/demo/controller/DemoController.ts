@@ -1,7 +1,7 @@
 import { injectable } from "inversify"
 import { apiController,  GET } from "typescript-lambda-api"
-import AbstractController from "app/platform/controllers/AbstractController";
-import DemoService from "app/domains/demo/services/DemoService";
+import AbstractController from "app/domains/platform/controller/AbstractController";
+import DemoService from "app/domains/demo/service/DemoService";
 
 @apiController("/demo")
 @injectable()

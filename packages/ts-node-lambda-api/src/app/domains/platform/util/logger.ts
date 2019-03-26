@@ -34,6 +34,7 @@ const getName = (obj: any): string => {
 
   return result || "";
 };
+
 const getLogger = (context: string| any): winston.Logger => {
   const logger: winston.Logger = winston.createLogger({
     exitOnError: false,

@@ -1,6 +1,6 @@
 import { injectable } from "inversify"
-import { apiController, Controller, GET } from "typescript-lambda-api"
-import AbstractController from "app/platform/controllers/AbstractController";
+import { apiController, GET } from "typescript-lambda-api"
+import AbstractController from "app/domains/platform/controller/AbstractController";
  
 @apiController("/demov2")
 @injectable() // all controller classes must be decorated with injectable

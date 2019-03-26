@@ -7,7 +7,7 @@ const getPaths = () => {
   const folders = fs
     .readdirSync(resolvePath)
     .map(domainFolder => {
-      const domainControllersPath = path.resolve(__dirname, `../src/app/domains/${domainFolder}/controllers`)
+      const domainControllersPath = path.resolve(__dirname, `../src/app/domains/${domainFolder}/controller`)
       const domainFolters = fs.readdirSync(domainControllersPath)
         .filter(domainFileController => fs.lstatSync(`${domainControllersPath}/${domainFileController}`).isFile())
         .map(domainFileController => {

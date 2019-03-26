@@ -1,4 +1,4 @@
-import { LoggerFactory } from "app/platform/utils/logger";
+import { LoggerFactory } from "app/domains/platform/util/logger";
 import { injectable } from "inversify";
 
 @injectable()

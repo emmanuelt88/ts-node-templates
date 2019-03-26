@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import 'mocha';
-import DemoSaludator from '../../../app/platform/demo/DemoSaludator';
+import DemoSaludator from '../../../app/domains/platform/demo/DemoSaludator';
 
 describe('Hello function', () => {
 

@@ -1,4 +1,4 @@
-import { component } from "app/platform/ioc/decorators";
+import { component } from "app/domains/platform/ioc/decorators";
 
 @component(DemoSaludator)
 class DemoSaludator {
