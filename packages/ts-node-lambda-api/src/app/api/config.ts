@@ -1,9 +1,12 @@
-import { DemoController } from './../domains/demo/controllers/demo.controller';
+import { DemoController } from '../domains/demo/controllers/DemoController';
 import { ApiApp } from "typescript-lambda-api";
 import { API } from "lambda-api";
+import IoCProviderFactory from 'app/platform/ioc/IoCProviderFactory';
+
+IoCProviderFactory.getInstance().initialize();
 
 export const configureApi = (app: ApiApp) => {
-  // const logger = getLoggerFor("DemoController");
+  
   app.configureApi((api: API) => {
     // add middleware handler, for example
     api.use((req,res,next) => {

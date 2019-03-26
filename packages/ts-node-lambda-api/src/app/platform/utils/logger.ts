@@ -14,6 +14,7 @@ const myFormat = printf(({ level, message, label, timestamp }) => {
   return `${timestamp} ${level.toUpperCase()} [${label}]: ${formattedMessage}`;
 });
 
+
 const getName = (obj: any): string => {
   if (obj.name) {
     return obj.name;
