@@ -1,21 +1,16 @@
 {
-  "files": [
-    "src/index.ts", "./src/lib/services/SaludatorServiceImpl.ts"
-  ],
   "include": [
     "src/**/*.ts",
   ],
   "compilerOptions": {
     "module": "commonjs",
     "noImplicitAny": true,
-    "target": "es6",
     "strict": true,
     "outDir": "dist",
     "lib": ["es2018", "dom"],
-    "types": ["reflect-metadata"],
-    // "rootDir": "src",
+    "rootDir": "src",
     "sourceMap": true,
-    // "baseUrl": ".",
+    "baseUrl": "src",
     "moduleResolution": "node",
     "removeComments": true,
     "declaration": true,

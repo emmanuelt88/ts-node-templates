@@ -1,5 +1,5 @@
 {
-  "name": "ts-node-lamnda-api",
+  "name": "@mvp/instagram-api",
   "version": "1.0.0",
   "description": "",
   "main": "dist/api",
@@ -14,10 +14,14 @@
     "build:prod": "webpack --mode=production --config .webpack/webpack.config.js  && npm run build:prod:controllers",
     "lint": "tslint -c tslint.json -p tsconfig.json --fix",
     "tsc": "tsc",
-    "test": "mocha -r ts-node/register src/tests/**/*.spec.ts",
+    "testx": "mocha -r ts-node/register -r tsconfig-paths/register src/tests/**/*.spec.ts --exit --timeout=1000000",
+    "test": "mocha -r ts-node/register -r tsconfig-paths/register src/tests/domain/management/service/AccountsService.spec.ts --exit --timeout=1000000",
     "deploy": "npm run clean & npm run build:prod && serverless deploy -v"
   },
-  "keywords": [],
+  "keywords": [
+    "instagram",
+    "private-api"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -37,6 +41,7 @@
     "chai": "^4.2.0",
     "fs-extra": "^7.0.1",
     "mocha": "^5.2.0",
+    "mocha-typescript": "^1.1.17",
     "nodemon": "^1.18.9",
     "npm-run-all": "^4.1.5",
     "rimraf": "^2.6.3",
@@ -46,6 +51,7 @@
     "shelljs": "^0.8.3",
     "ts-loader": "^5.3.3",
     "ts-node": "^7.0.1",
+    "tsconfig-paths": "^3.8.0",
     "tslint": "^5.12.0",
     "typescript": "^3.3.3333",
     "typescript-lambda-api-local": "^0.2.0",
@@ -54,7 +60,12 @@
     "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
+    "@hyp3r/test-social-email-validator": "^1.0.0",
+    "instagram-private-api": "^0.6.8",
     "inversify-binding-decorators": "^4.0.0",
+    "redis": "^2.8.0",
+    "reflect-metadata": "^0.1.13",
+    "tough-cookie-redis": "^1.0.4",
     "typescript-lambda-api": "^0.3.0",
     "winston": "^3.2.1"
   }
