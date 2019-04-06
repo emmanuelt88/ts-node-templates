@@ -1,15 +1,8 @@
-export interface SquareConfig {
-  color?: string;
-  width?: number;
+export interface CalculatorRequest {
+  a: number;
+  b: number;
 }
 
-
-export class Greeter {
-  greeting: string;
-  constructor(message: string) {
-      this.greeting = message;
-  }
-  greet() {
-      return "Hello, " + this.greeting;
-  }
+export interface CalculatorResponse {
+  result: number;
 }

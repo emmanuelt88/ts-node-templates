@@ -13,23 +13,23 @@ module.exports = {
   output: {
     path: __dirname + '/dist',
     filename: 'index.js',
-    libraryTarget: 'commonjs'
+    libraryTarget: 'commonjs2',
+    library: "@ts-template/ts-node-library"
   },
   resolve: {
-    // Add '.ts' and '.tsx' as a resolvable extension.
-    extensions: ['.webpack.js', '.web.js', '.ts', '.tsx', '.js'],
+    extensions: ['.webpack.js', '.web.js', '.ts', '.js'],
   },
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.ts$/,
         use: 'ts-loader',
         exclude: /node_modules/
       },
     ]
   },
   resolve: {
-    extensions: ['.ts', '.tsx']
+    extensions: ['.ts']
   },
   target: 'node',
   externals: nodeModules,

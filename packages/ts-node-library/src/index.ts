@@ -1,8 +1,7 @@
-import { SaludatorService, ConsumerSaludatorService } from './lib/services';
-
-
+import { CalculatorRequest } from './@types/index';
+import Calculator from "./lib/Calculator";
 
 export {
-  SaludatorService,
-  ConsumerSaludatorService
-}
+  Calculator,
+  CalculatorRequest,
+};
