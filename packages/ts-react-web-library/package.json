@@ -1,9 +1,9 @@
 {
-  "name": "docz-example-typescript",
-  "version": "1.0.0-rc.7",
+  "name": "@ts-template/ts-react-web-library",
+  "version": "1.0.0",
   "license": "MIT",
-  "main": "dist/bundle.js",
-  "types": "dist/types/index.d.ts",
+  "main": "dist/index",
+  "types": "dist/index.d.ts",
   "scripts": {
     "doc": "docz dev",
     "doc:build": "docz build",

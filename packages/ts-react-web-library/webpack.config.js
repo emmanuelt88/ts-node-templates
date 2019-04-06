@@ -5,8 +5,10 @@ module.exports = {
   entry: path.resolve(__dirname, 'src/index.tsx'),
 
   output: {
-    filename: 'bundle.js',
+    filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
+    libraryTarget: 'commonjs2',
+    library: '@ts-template/ts-react-web-library',
   },
   devtool: 'source-map',
 
