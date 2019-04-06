@@ -1,6 +1,7 @@
-import * as React from 'react';
-import Hello from './components/HelloWorld/Hello';
+import { Alert } from "@components/Alert";
+import { Button } from "@components/Button";
 
 export {
-  Hello,
-};
+  Alert,
+  Button
+}

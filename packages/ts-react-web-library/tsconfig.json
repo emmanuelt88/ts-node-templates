@@ -1,18 +1,26 @@
 {
+  "extends": "./tsconfig.parent.json",
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
-    "jsx": "react",
-    "module": "commonjs",
-    "moduleResolution": "node",
     "declaration": true,
-    "noImplicitAny": true,
+    "baseUrl": "src",
+    "rootDir": "src",
     "outDir": "dist",
-    "preserveConstEnums": true,
-    "removeComments": true,
-    "sourceMap": true,
-    "target": "es2018"
+    "skipLibCheck": true,
+    "paths": {
+      "*": [
+        "node_modules/*",
+        "src/*",
+      ],
+      "@components/*": ["components/*"],
+    },
+  },
+  "awesomeTypescriptLoaderOptions": {
+    "transpileOnly": true
   },
   "include": [
-    "./src/**/**/*"
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules/**"
   ]
 }
